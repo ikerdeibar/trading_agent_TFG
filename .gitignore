@@ -1,0 +1,25 @@
+# Secrets & credentials
+.env
+dashboard/.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+trading_agent.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+
+# Testing / caches
+.pytest_cache/
+
+# OS
+.DS_Store
+
+# IDE
+.cursor/
+.vscode/

@@ -1,0 +1,36 @@
+# configs/base.yaml
+
+universe:
+  tickers:
+    - NVDA
+    - AAPL
+    - MSFT
+    - GOOGL
+    - AMZN
+    - JPM
+    - XOM
+    - LLY
+    - CAT
+    - NEE
+  benchmark: SPY
+
+risk:
+  max_position_pct: 5.0
+  market_open_et:  "09:45"
+  market_close_et: "15:45"
+
+data:
+  feed: "iex"   # switch to "sip" if subscription added
+
+schedule:
+  cycle_interval_minutes: 65
+  session_start_et: "09:15"
+  session_end_et:   "15:45"
+
+rag:
+  chunk_size_tokens:    300
+  chunk_overlap_tokens: 50
+  top_k_chunks:         5
+
+memory:
+  distilled_packet_max_tokens: 200

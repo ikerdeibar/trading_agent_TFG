@@ -1,0 +1,49 @@
+# configs/experiments.yaml
+# 2x2 design: Architecture (monolithic/multi_agent) x Model (OSS/proprietary)
+# Arms A/B = OSS (Qwen via OpenRouter)
+# Arms C/D = Proprietary (GPT-4.1 via OpenAI)
+
+arms:
+  A:
+    name: "Monolithic-Qwen"
+    architecture: "monolithic"
+    llm:
+      provider: "openrouter"
+      model: "qwen/qwen3-235b-a22b-2507"
+      temperature: 0.1
+      max_tokens: 1024
+
+  B:
+    name: "MultiAgent-Qwen"
+    architecture: "multi_agent"
+    llm:
+      provider: "openrouter"
+      model: "qwen/qwen3-235b-a22b-2507"
+      temperature: 0.1
+      max_tokens: 1024
+
+  C:
+    name: "Monolithic-GPT"
+    architecture: "monolithic"
+    llm:
+      provider: "openai"
+      model: "gpt-4.1"
+      temperature: 0.1
+      max_tokens: 1024
+
+  D:
+    name: "MultiAgent-GPT"
+    architecture: "multi_agent"
+    llm:
+      provider: "openai"
+      model: "gpt-4.1"
+      temperature: 0.1
+      max_tokens: 1024
+
+embeddings:
+  provider: "openrouter"
+  model: "qwen/qwen3-embedding-8b"
+
+dev:
+  provider: "openrouter"
+  model: "qwen/qwen3-235b-a22b-2507"
