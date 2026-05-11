@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-05-10T18:24:25Z",
+  "window_start": "2026-03-15",
+  "window_end": "2026-05-10",
+  "tables": {
+    "portfolio_snapshots": 14848,
+    "trades": 17934,
+    "agent_decision_logs": 374800,
+    "market_snapshots": 49618,
+    "sentiment_snapshots": 53633,
+    "spy_benchmark": 3918
+  }
+}

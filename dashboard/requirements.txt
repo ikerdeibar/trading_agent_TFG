@@ -1,0 +1,17 @@
+# Minimal deps for the deployed dashboard (snapshot mode).
+# Pinned to the widely available LTS-style versions known to work
+# together on Streamlit Community Cloud (Python 3.11).
+
+streamlit>=1.39,<2.0
+pandas>=2.0,<3.0
+numpy>=1.26,<3.0
+plotly>=5.20,<7.0
+pyarrow>=15.0,<19.0
+
+# Optional — only needed for live SPY refresh (snapshot already includes SPY).
+alpaca-py>=0.34,<1.0
+
+# Live mode only (DASHBOARD_SOURCE=live). Safe to keep in requirements;
+# adds <1MB to the install footprint.
+sqlalchemy>=2.0,<3.0
+psycopg2-binary>=2.9,<3.0
